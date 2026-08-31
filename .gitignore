@@ -25,3 +25,13 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Local SQLite database
+/database/*.sqlite
+/database/*.sqlite-*
+
+# Temporary campaign files and attachments
+/storage/app/private/campaigns/
+
+# Local temporary uploads
+/storage/app/private/tmp/
