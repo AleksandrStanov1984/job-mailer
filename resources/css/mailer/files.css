@@ -1,0 +1,125 @@
+.upload-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+.upload-card {
+    padding: 18px;
+
+    border: 1px solid #d6dde5;
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    box-shadow:
+        0 2px 5px rgba(31, 41, 51, 0.05);
+}
+
+.upload-card-title {
+    margin-bottom: 4px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.upload-card-description {
+    margin-bottom: 14px;
+
+    color: #718096;
+
+    font-size: 12px;
+}
+
+.upload-result {
+    margin-top: 10px;
+
+    color: #718096;
+
+    font-size: 12px;
+}
+
+.file-picker {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.file-picker-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.file-picker-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+    height: 40px;
+
+    margin: 0 !important;
+    padding: 0 16px;
+
+    border: 1px solid #b9c3ce;
+    border-radius: 6px;
+
+    background: #f4f6f8;
+    color: #25313d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.file-picker-button:hover {
+    background: #e8ecf0;
+}
+
+.file-picker-name {
+    color: #66727e;
+
+    font-size: 14px;
+}
+
+.selected-files {
+    margin-top: 10px;
+}
+
+.selected-file-item {
+    position: relative;
+
+    margin-bottom: 5px;
+    padding: 8px 10px 8px 32px;
+
+    border: 1px solid #b9dfc4;
+    border-radius: 6px;
+
+    background: #f0faf3;
+    color: #276738;
+
+    font-size: 13px;
+}
+
+.selected-file-item::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 11px;
+
+    color: #1f9d55;
+
+    font-weight: 700;
+}

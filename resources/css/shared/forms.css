@@ -1,0 +1,99 @@
+.mailer-field {
+    margin-bottom: 20px;
+}
+
+.mailer-field:last-child {
+    margin-bottom: 0;
+}
+
+.mailer-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+
+    color: #263238;
+}
+
+.mailer-input,
+.mailer-textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #c7cfd8;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #1f2933;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.mailer-input:focus,
+.mailer-textarea:focus {
+    border-color: #6c7f93;
+
+    box-shadow:
+        0 0 0 3px rgba(108, 127, 147, 0.12);
+}
+
+.mailer-textarea {
+    min-height: 240px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+.mailer-muted {
+    margin-top: 6px;
+
+    color: #7a8793;
+
+    font-size: 12px;
+}
+
+.mailer-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 24px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e6e9ed;
+}
+
+.mailer-button {
+    padding: 11px 18px;
+
+    border: 1px solid #b7c0ca;
+    border-radius: 6px;
+
+    background: #f7f8fa;
+    color: #263238;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.mailer-button:hover {
+    background: #eceff3;
+}
+
+.mailer-button-primary {
+    border-color: #2f6fed;
+
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.mailer-button-primary:hover {
+    background: #255fd1;
+}

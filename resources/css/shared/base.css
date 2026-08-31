@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 0 50px;
+
+    font-family: Arial, sans-serif;
+
+    background: #cfd5dc;
+    color: #1f2933;
+}
+
+.mailer-container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.mailer-title {
+    margin: 0 0 24px;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #17202a;
+}

@@ -1,0 +1,63 @@
+.preview-empty {
+    padding: 22px;
+
+    border: 1px dashed #cbd3dc;
+    border-radius: 6px;
+
+    background: #f8fafb;
+
+    color: #78838e;
+}
+
+.preview-empty strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #4b5865;
+}
+
+.preview-empty div {
+    color: #7a8793;
+}
+
+.preview-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #edf0f2;
+}
+
+.preview-label {
+    font-weight: 700;
+
+    color: #4d5965;
+}
+
+.preview-row-block {
+    display: block;
+}
+
+.preview-row-block .preview-label {
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.preview-message {
+    margin: 0;
+    padding: 15px;
+
+    border: 1px solid #dde3e8;
+    border-radius: 6px;
+
+    background: #f8fafb;
+
+    white-space: pre-wrap;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.5;
+}

@@ -1,0 +1,125 @@
+.mailer-stats {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.mailer-stat {
+    min-width: 150px;
+    padding: 12px 14px;
+
+    border: 1px solid #e0e5eb;
+    border-left-width: 4px;
+    border-radius: 7px;
+
+    background: #f6f8fa;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+.mailer-stat:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(31, 41, 51, 0.10),
+        0 8px 18px rgba(31, 41, 51, 0.06);
+}
+
+.mailer-stat.is-active {
+    box-shadow:
+        0 0 0 2px rgba(47, 111, 237, 0.20),
+        0 4px 12px rgba(31, 41, 51, 0.12);
+
+    transform: translateY(-1px);
+}
+
+.mailer-stat-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #77828d;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.mailer-stat-value {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #1f2933;
+}
+
+
+/* Все */
+
+.stat-all {
+    border-left-color: #64748b;
+
+    background: #f4f6f8;
+}
+
+.stat-all:hover {
+    background: #eef1f4;
+}
+
+
+/* Отправлено */
+
+.stat-sent {
+    border-left-color: #22a35a;
+
+    background: #f2fbf5;
+}
+
+.stat-sent:hover {
+    background: #e8f7ed;
+}
+
+
+/* Ошибки */
+
+.stat-failed {
+    border-left-color: #dc3545;
+
+    background: #fff5f5;
+}
+
+.stat-failed:hover {
+    background: #fdebec;
+}
+
+
+/* Пропущено */
+
+.stat-skipped {
+    border-left-color: #e0a800;
+
+    background: #fffaf0;
+}
+
+.stat-skipped:hover {
+    background: #fff4d8;
+}
+
+
+/* Ожидает */
+
+.stat-pending {
+    border-left-color: #3b82f6;
+
+    background: #f3f7ff;
+}
+
+.stat-pending:hover {
+    background: #eaf1ff;
+}

@@ -1,0 +1,37 @@
+.settings-row {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 18px;
+}
+
+.settings-checkbox {
+    display: flex !important;
+    align-items: center;
+
+    gap: 8px;
+
+    height: 40px;
+    margin: 0 !important;
+
+    font-weight: 500 !important;
+}
+
+.settings-checkbox input {
+    width: 16px;
+    height: 16px;
+}
+
+.settings-small-field {
+    width: 150px;
+}
+
+.settings-small-field label {
+    margin-bottom: 6px;
+
+    font-size: 13px;
+}
+
+.settings-save-button {
+    height: 40px;
+}
