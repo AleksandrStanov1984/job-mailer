@@ -124,7 +124,7 @@ function renderRecipients() {
             </td>
 
             <td>
-                —
+                ${renderResult(recipient)}
             </td>
         `;
 
@@ -287,6 +287,35 @@ function renderStatus(status) {
     `;
 }
 
+function renderResult(recipient) {
+    if (recipient.error_message) {
+        return `
+            <span title="${escapeHtml(recipient.error_message)}">
+                ${escapeHtml(recipient.error_message)}
+            </span>
+        `;
+    }
+
+    const date =
+        recipient.sent_at ??
+        recipient.failed_at ??
+        recipient.skipped_at;
+
+    if (!date) {
+        return '—';
+    }
+
+    const parsed =
+        new Date(date);
+
+    if (Number.isNaN(parsed.getTime())) {
+        return escapeHtml(date);
+    }
+
+    return escapeHtml(
+        parsed.toLocaleString('ru-RU')
+    );
+}
 
 function setText(id, value) {
     const element =
@@ -318,4 +347,34 @@ function escapeHtml(value) {
 
 export function getRecipients() {
     return recipients;
+}
+
+export function replaceRecipients(newRecipients) {
+    recipients = newRecipients;
+
+    renderRecipients();
+    updateStats();
+    applyCurrentTableFilter();
+}
+
+
+export function updateRecipient(updatedRecipient) {
+    const index = recipients.findIndex(
+        recipient =>
+            Number(recipient.id) ===
+            Number(updatedRecipient.id)
+    );
+
+    if (index === -1) {
+        return;
+    }
+
+    recipients[index] = {
+        ...recipients[index],
+        ...updatedRecipient,
+    };
+
+    renderRecipients();
+    updateStats();
+    applyCurrentTableFilter();
 }

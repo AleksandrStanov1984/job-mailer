@@ -100,8 +100,20 @@
 .selected-file-item {
     position: relative;
 
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 12px;
+
     margin-bottom: 5px;
-    padding: 8px 10px 8px 32px;
+
+    padding:
+        6px
+        8px
+        6px
+        32px;
 
     border: 1px solid #b9dfc4;
     border-radius: 6px;
@@ -110,6 +122,8 @@
     color: #276738;
 
     font-size: 13px;
+
+    box-sizing: border-box;
 }
 
 .selected-file-item::before {
@@ -122,4 +136,58 @@
     color: #1f9d55;
 
     font-weight: 700;
+}
+
+.selected-file-name {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+.selected-file-remove {
+    flex: 0 0 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 30px;
+
+    margin-left: auto;
+    padding: 0;
+
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+
+    background: #fff;
+    color: #dc3545;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.selected-file-remove:hover {
+    background: #dc3545;
+    color: #fff;
+
+    transform: scale(1.05);
+}
+
+.selected-file-remove:active {
+    transform: scale(0.96);
 }

@@ -2,10 +2,13 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class HistoryPageTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function test_history_page_is_available(): void
     {
         $response = $this->get('/history');
@@ -31,18 +34,32 @@ class HistoryPageTest extends TestCase
             'История рассылок'
         );
 
-        /*
-         * Здесь мы проверяем именно элементы,
-         * которые уже должны присутствовать
-         * на странице истории.
-         */
+        $response->assertSee(
+            'Поиск'
+        );
 
         $response->assertSee(
             'Статус'
         );
 
         $response->assertSee(
-            'Дата'
+            'С даты'
+        );
+
+        $response->assertSee(
+            'По дату'
+        );
+
+        $response->assertSee(
+            'Сортировка'
+        );
+
+        $response->assertSee(
+            'Применить'
+        );
+
+        $response->assertSee(
+            'Сбросить'
         );
     }
 }

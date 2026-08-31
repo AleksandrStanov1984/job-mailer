@@ -8,6 +8,8 @@
         content="{{ csrf_token() }}"
     >
 
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+
     <title>{{ $title ?? 'Рассылка' }}</title>
 
     @vite([
@@ -29,7 +31,10 @@
 
 @if ($page === 'history')
 
-    <x-history.history-page />
+    <x-history.history-page
+        :history-recipients="$historyRecipients"
+        :history-filters="$historyFilters"
+    />
 
 @else
 

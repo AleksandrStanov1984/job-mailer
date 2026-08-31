@@ -8,6 +8,8 @@ import { initPreview } from './mailer/preview/preview';
 
 import { initTestMail } from './mailer/sending/test-mail';
 
+import { initCampaignMail } from './mailer/sending/campaign-mail';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initFileInputs();
@@ -19,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initPreview();
 
     initTestMail();
+    initCampaignMail();
 });

@@ -1,3 +1,8 @@
+@props([
+    'historyRecipients',
+    'historyFilters',
+])
+
 <div class="mailer-container">
 
     <div class="history-page-header">
@@ -21,8 +26,12 @@
 
     </div>
 
-    <x-history.history-filters />
+    <x-history.history-filters
+        :history-filters="$historyFilters"
+    />
 
-    <x-history.history-table />
+    <x-history.history-table
+        :history-recipients="$historyRecipients"
+    />
 
 </div>
